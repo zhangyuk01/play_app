@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2A89D4EB1D196FCC00675C1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A89D4EA1D196FCC00675C1E /* main.m */; };
 		2A89D4EE1D196FCC00675C1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A89D4ED1D196FCC00675C1E /* AppDelegate.m */; };
-		2A89D4F11D196FCC00675C1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A89D4F01D196FCC00675C1E /* ViewController.m */; };
-		2A89D4F41D196FCC00675C1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A89D4F21D196FCC00675C1E /* Main.storyboard */; };
 		2A89D4F61D196FCC00675C1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A89D4F51D196FCC00675C1E /* Images.xcassets */; };
 		2A89D4F91D196FCC00675C1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A89D4F71D196FCC00675C1E /* LaunchScreen.xib */; };
 		2A89D5051D196FCC00675C1E /* dianying_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A89D5041D196FCC00675C1E /* dianying_appTests.m */; };
@@ -32,14 +30,12 @@
 		2A89D4EA1D196FCC00675C1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2A89D4EC1D196FCC00675C1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2A89D4ED1D196FCC00675C1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2A89D4EF1D196FCC00675C1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2A89D4F01D196FCC00675C1E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2A89D4F31D196FCC00675C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A89D4F51D196FCC00675C1E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2A89D4F81D196FCC00675C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2A89D4FE1D196FCC00675C1E /* dianying_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dianying_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A89D5031D196FCC00675C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A89D5041D196FCC00675C1E /* dianying_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dianying_appTests.m; sourceTree = "<group>"; };
+		2A89D5121D198D8E00675C1E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +77,10 @@
 		2A89D4E71D196FCC00675C1E /* dianying_app */ = {
 			isa = PBXGroup;
 			children = (
-				2A89D4EC1D196FCC00675C1E /* AppDelegate.h */,
-				2A89D4ED1D196FCC00675C1E /* AppDelegate.m */,
-				2A89D4EF1D196FCC00675C1E /* ViewController.h */,
-				2A89D4F01D196FCC00675C1E /* ViewController.m */,
-				2A89D4F21D196FCC00675C1E /* Main.storyboard */,
+				2A89D5111D198C5A00675C1E /* other */,
+				2A89D5101D198C5000675C1E /* controller */,
+				2A89D50F1D198C4300675C1E /* view */,
+				2A89D50E1D198C3500675C1E /* model */,
 				2A89D4F51D196FCC00675C1E /* Images.xcassets */,
 				2A89D4F71D196FCC00675C1E /* LaunchScreen.xib */,
 				2A89D4E81D196FCC00675C1E /* Supporting Files */,
@@ -117,6 +112,37 @@
 				2A89D5031D196FCC00675C1E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A89D50E1D198C3500675C1E /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		2A89D50F1D198C4300675C1E /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		2A89D5101D198C5000675C1E /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		2A89D5111D198C5A00675C1E /* other */ = {
+			isa = PBXGroup;
+			children = (
+				2A89D5121D198D8E00675C1E /* PrefixHeader.pch */,
+				2A89D4EC1D196FCC00675C1E /* AppDelegate.h */,
+				2A89D4ED1D196FCC00675C1E /* AppDelegate.m */,
+			);
+			name = other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +225,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A89D4F41D196FCC00675C1E /* Main.storyboard in Resources */,
 				2A89D4F91D196FCC00675C1E /* LaunchScreen.xib in Resources */,
 				2A89D4F61D196FCC00675C1E /* Images.xcassets in Resources */,
 			);
@@ -219,7 +244,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A89D4F11D196FCC00675C1E /* ViewController.m in Sources */,
 				2A89D4EE1D196FCC00675C1E /* AppDelegate.m in Sources */,
 				2A89D4EB1D196FCC00675C1E /* main.m in Sources */,
 			);
@@ -244,14 +268,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2A89D4F21D196FCC00675C1E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A89D4F31D196FCC00675C1E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2A89D4F71D196FCC00675C1E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +302,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -326,6 +343,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -343,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = dianying_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = dianying_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +432,7 @@
 				2A89D50A1D196FCC00675C1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A89D50B1D196FCC00675C1E /* Build configuration list for PBXNativeTarget "dianying_appTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +441,7 @@
 				2A89D50D1D196FCC00675C1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

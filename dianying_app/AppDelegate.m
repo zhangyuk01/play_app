@@ -16,30 +16,59 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //创建windows
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor redColor];
+    
+    
+    //1.创建根控制器
+    UITabBarController *tb = [[UITabBarController alloc] init];
+    self.window.rootViewController = tb;
+    
+    //2.添加多个控制器
+    UIViewController *home= [self addControllerWithClass:[UIViewController class] title:@"首页" image:@"首页_24" selectedImage:@"首页_24"];
+    UIViewController *pd= [self addControllerWithClass:[UIViewController class] title:@"频道" image:@"频道_27" selectedImage:@"频道_27"];
+    UIViewController *dy= [self addControllerWithClass:[UIViewController class] title:@"订阅" image:@"订阅_27" selectedImage:@"订阅_27"];
+    UIViewController *me= [self addControllerWithClass:[UIViewController class] title:@"我的" image:@"我的_31" selectedImage:@"我的_31"];
+    tb.viewControllers=@[home,pd,dy,me];
+    
+    
+    
+    [self.window makeKeyAndVisible];
+    
+
+    
     return YES;
 }
 
+/**
+   根据一个创建好的控制器初始化控制器
+ */
+-(UIViewController *) addControllerWithClass:(Class) class title:(NSString *)title
+image:(NSString *)image selectedImage:(NSString *)selectedImage{
+   
+    UIViewController *vc = [[class alloc] init];
+    vc.tabBarItem.title = title;
+    vc.tabBarItem.image = [UIImage imageNamed:image];
+    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+    vc.view.backgroundColor = [UIColor grayColor];
+    return vc;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end
